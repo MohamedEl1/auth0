@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route } from 'react-router-dom';
+import Callback from './Callback';
+import Home from './Home';
+import NavBar from './NavBar/NavBar';
+
 
 function App() {
+
+  // return (
+  //   <div>
+  //     <NavBar/>
+  //     <p>Work in progress.</p>
+  //   </div>
+  // )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className="App" >
+      <Route exact path='/NavBar/Navbar' component={NavBar} exact />
+      <Route exact path='/' component={Home} exact />
+      <Route exact path='/callback' component={Callback} exact />
     </div>
-  );
+    
+  )
 }
 
 export default App;
